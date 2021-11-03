@@ -2,4 +2,13 @@
 
 <mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd"></mule>
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="github-pocFlow" doc:id="8d8deb07-da92-4173-b772-02c9971e1b0d" >
+		<scheduler doc:name="Scheduler" doc:id="f3fa8515-45de-4509-a25d-1f09e38d9570" >
+			<scheduling-strategy >
+				<fixed-frequency timeUnit="DAYS"/>
+			</scheduling-strategy>
+		</scheduler>
+		<logger level="INFO" doc:name="Logger" doc:id="5fa5b122-f168-4e91-bae5-5bc20c1febef" message='#["POC"]'/>
+	</flow>
+</mule>
